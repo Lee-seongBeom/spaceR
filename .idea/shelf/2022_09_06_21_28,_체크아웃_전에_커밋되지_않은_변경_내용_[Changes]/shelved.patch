@@ -1,0 +1,19 @@
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n\tid 'org.springframework.boot' version '2.7.0'\n\tid 'io.spring.dependency-management' version '1.0.11.RELEASE'\n\tid 'java'\n}\n\ngroup = 'com.common'\nversion = '0.0.1-SNAPSHOT'\nsourceCompatibility = '17'\n\nconfigurations {\n\tcompileOnly {\n\t\textendsFrom annotationProcessor\n\t}\n}\n\nrepositories {\n\tmavenCentral()\n}\n\next {\n\tset('testcontainersVersion', \"1.17.2\")\n}\n\ndependencies {\n\timplementation 'org.springframework.boot:spring-boot-starter-data-jdbc'\n\timplementation 'org.springframework.boot:spring-boot-starter-data-jpa'\n\timplementation 'org.springframework.boot:spring-boot-starter-jdbc'\n\timplementation 'org.springframework.boot:spring-boot-starter-oauth2-client'\n\timplementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'\n\timplementation 'org.springframework.boot:spring-boot-starter-security'\n\timplementation 'org.springframework.boot:spring-boot-starter-thymeleaf'\n\timplementation 'org.springframework.boot:spring-boot-starter-validation'\n\timplementation 'org.springframework.boot:spring-boot-starter-websocket'\n\timplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'\n\timplementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'\n\tcompileOnly 'org.projectlombok:lombok'\n\tdevelopmentOnly 'org.springframework.boot:spring-boot-devtools'\n\truntimeOnly 'org.mariadb.jdbc:mariadb-java-client'\n\tannotationProcessor 'org.projectlombok:lombok'\n\ttestImplementation 'org.springframework.boot:spring-boot-starter-test'\n\ttestImplementation 'org.springframework.security:spring-security-test'\n\ttestImplementation 'org.testcontainers:junit-jupiter'\n\ttestImplementation 'org.testcontainers:mariadb'\n}\n\ndependencyManagement {\n\timports {\n\t\tmavenBom \"org.testcontainers:testcontainers-bom:${testcontainersVersion}\"\n\t}\n}\n\ntasks.named('test') {\n\tuseJUnitPlatform()\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision f6ba1a1b80b65a7b9831c99f2b33ad1300e2e993)
++++ b/build.gradle	(date 1655897838655)
+@@ -6,7 +6,7 @@
+ 
+ group = 'com.common'
+ version = '0.0.1-SNAPSHOT'
+-sourceCompatibility = '17'
++sourceCompatibility = '11'
+ 
+ configurations {
+ 	compileOnly {
